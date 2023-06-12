@@ -1,9 +1,15 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import SignIn from "./pages/signInPage/signIn";
 
 function App() {
   return (
-   <>
-   <p>Citação em Foco</p>
-   </>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<SignIn />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
