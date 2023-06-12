@@ -20,6 +20,7 @@ export const StyledForm = styled.form`
     background: #ffffff;
     border-radius: 5px;
     border: none;
+    font-size: 15px;
     box-shadow: 1px 1px 16px 0px rgba(0, 0, 0, 0.21);
   }
   button {

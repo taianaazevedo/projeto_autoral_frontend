@@ -10,7 +10,7 @@ export default function FormSignIn() {
 
 
   function onSubmit(data) {
-    console.log(data);
+    console.log(data.Email, data.Senha);
   } 
  
 
@@ -22,7 +22,7 @@ export default function FormSignIn() {
         {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
         aria-invalid={errors.Email ? "true" : "false"}
       />
-      {errors.Email?.type === 'required' && <p className="alert">First name is required</p>}
+      {errors.Email?.type === 'required' && <p className="alert">Email is required</p>}
       <input
         type="password"
         placeholder="Senha"
