@@ -1,18 +1,35 @@
 import { useForm } from "react-hook-form";
 import { StyledForm } from "./formStyle";
+import { useRef } from "react";
+import { signUp } from "../../services/signUpApi";
+import { useNavigate } from "react-router-dom";
 
 export default function FormSignUp() {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    watch,
   } = useForm();
+  const navigate = useNavigate();
 
+  const password = useRef({});
+  password.current = watch("Senha", "");
 
-  function onSubmit(data) {
-    console.log(data);
-  } 
- 
+  async function onSubmit(data) {
+    try {
+      await signUp(
+        data.Nome,
+        data.Email,
+        data.Senha,
+        data.ConfirmPassword,
+        data.Url
+      );
+      navigate("/");
+    } catch (error) {
+      alert("Algo deu errado, por favor, tente novamente");
+    }
+  }
 
   return (
     <StyledForm onSubmit={handleSubmit(onSubmit)}>
@@ -22,14 +39,18 @@ export default function FormSignUp() {
         {...register("Nome", { required: true })}
         aria-invalid={errors.Nome ? "true" : "false"}
       />
-      {errors.Nome?.type === 'required' && <p className="alert">Name is required</p>}
+      {errors.Nome?.type === "required" && (
+        <p className="alert">Name is required</p>
+      )}
       <input
         type="email"
         placeholder="Email"
         {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
         aria-invalid={errors.Email ? "true" : "false"}
       />
-      {errors.Email?.type === 'required' && <p className="alert">Email is required</p>}
+      {errors.Email?.type === "required" && (
+        <p className="alert">Email is required</p>
+      )}
       <input
         type="text"
         name="Url"
@@ -37,11 +58,13 @@ export default function FormSignUp() {
         {...register("Url", { required: true })}
         aria-invalid={errors.Url ? "true" : "false"}
       />
-      {errors.Url?.type === 'required' && <p className="alert">Url is required</p>}
+      {errors.Url?.type === "required" && (
+        <p className="alert">Url is required</p>
+      )}
       <input
         type="password"
         placeholder="Senha"
-        {...register("Senha", { required: "Password is required"})}
+        {...register("Senha", { required: "Password is required" })}
         aria-invalid={errors.Senha ? "true" : "false"}
       />
       {errors.Senha && <p className="alert">{errors.Senha?.message}</p>}
@@ -49,11 +72,19 @@ export default function FormSignUp() {
         type="password"
         name="ConfirmPassword"
         placeholder="Confirme a senha"
-        {...register("ConfirmPassword", { required: "Confirm password is required"})}
+        {...register("ConfirmPassword", {
+          required: "Confirm password is required",
+          validate: (value) =>
+            value === password.current || "Passwords don't match",
+        })}
         aria-invalid={errors.ConfirmPassword ? "true" : "false"}
       />
-      {errors.ConfirmPassword && <p className="alert">{errors.ConfirmPassword?.message}</p>}
-      <button type="submit" placeholder="Entrar">Cadastrar</button>
+      {errors.ConfirmPassword && (
+        <p className="alert">{errors.ConfirmPassword?.message}</p>
+      )}
+      <button type="submit" placeholder="Entrar">
+        Cadastrar
+      </button>
     </StyledForm>
   );
 }

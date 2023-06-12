@@ -5,6 +5,8 @@ export const StyledSignUp = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  top: -20px;
   .link-login {
     margin-top: 20px;
     font-style: normal;
@@ -13,5 +15,6 @@ export const StyledSignUp = styled.div`
     line-height: 16px;
     text-align: center;
     color: #382f2f;
+    cursor: pointer;
   }
 `;

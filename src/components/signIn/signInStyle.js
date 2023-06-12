@@ -13,6 +13,7 @@ export const StyledSignIn = styled.div`
     line-height: 16px;
     text-align: center;
     color: #382f2f;
+    cursor: pointer;
   }
 `;
 
