@@ -1,31 +1,34 @@
 import styled from "styled-components";
 
-export const StyledMenu = styled.menu`
+export const StyledMenu = styled.nav`
+  position: fixed;
+  top: 50px;
+  z-index: 2;
   background-color: #ffe195;
   width: 100%;
-  max-width: 275px;
-  height: 60vh;
+  max-width: 250px;
+  height: 68vh;
   border-radius: 0px 0px 5px 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  animation: scale-in-ver-top 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: scale-in-ver-top 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   @keyframes scale-in-ver-top {
-  0% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
-    opacity: 1;
+    0% {
+      -webkit-transform: scaleY(0);
+      transform: scaleY(0);
+      -webkit-transform-origin: 100% 0%;
+      transform-origin: 100% 0%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+      transform-origin: 100% 0%;
+      opacity: 1;
+    }
   }
-  100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
-    opacity: 1;
-  }
-}
   p {
     background-color: transparent;
     font-weight: 400;
@@ -33,10 +36,9 @@ export const StyledMenu = styled.menu`
     color: #505050;
     margin-left: 8px;
   }
-
 `;
 
-export const UserInfo = styled.div`
+export const UserInfo = styled.li`
   margin-left: 5px;
   display: flex;
   align-items: center;
@@ -44,15 +46,19 @@ export const UserInfo = styled.div`
   height: 51px;
   background: #fff2cf;
   border-radius: 5px;
+  cursor: pointer;
   img {
     margin-left: 5px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
   }
+  &:hover {
+    background-color: #fff79c;
+  }
 `;
 
-export const AllThemes = styled.div`
+export const AllThemes = styled.li`
   margin-left: 5px;
   display: flex;
   align-items: center;
@@ -60,10 +66,13 @@ export const AllThemes = styled.div`
   height: 51px;
   background: #fff2cf;
   border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: #fff79c;
+  }
+`;
 
-`
-
-export const Songs = styled.div`
+export const Songs = styled.li`
   margin-left: 5px;
   display: flex;
   align-items: center;
@@ -71,10 +80,13 @@ export const Songs = styled.div`
   height: 51px;
   background: #fff2cf;
   border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: #fff79c;
+  }
+`;
 
-`
-
-export const Movies = styled.div`
+export const Movies = styled.li`
   margin-left: 5px;
   display: flex;
   align-items: center;
@@ -82,10 +94,13 @@ export const Movies = styled.div`
   height: 51px;
   background: #fff2cf;
   border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: #fff79c;
+  }
+`;
 
-`
-
-export const Series = styled.div`
+export const Series = styled.li`
   margin-left: 5px;
   display: flex;
   align-items: center;
@@ -93,10 +108,13 @@ export const Series = styled.div`
   height: 51px;
   background: #fff2cf;
   border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: #fff79c;
+  }
+`;
 
-`
-
-export const Books = styled.div`
+export const Books = styled.li`
   margin-left: 5px;
   display: flex;
   align-items: center;
@@ -104,5 +122,22 @@ export const Books = styled.div`
   height: 51px;
   background: #fff2cf;
   border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: #fff79c;
+  }
+`;
 
-`
+export const Favorites = styled.li`
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  width: 95%;
+  height: 51px;
+  background: #fff2cf;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: #fff79c;
+  }
+`;

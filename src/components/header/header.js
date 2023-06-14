@@ -26,7 +26,7 @@ export default function Header() {
     if (!token) {
       navigate("/");
     }
-  });
+  }, []);
 
   return (
     <>

@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
-  background-color: #ffa438;
+  position: fixed;
+  top: 0;
+  background-color: #f7b54a;
   width: 100%;
   height: 50px;
   display: flex;
