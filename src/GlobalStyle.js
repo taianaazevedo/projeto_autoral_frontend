@@ -18,7 +18,7 @@ time, mark, audio, video, main {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 16px;
 	font: inherit;
 	vertical-align: baseline;
 	background-color: #e6f0cc;

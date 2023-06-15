@@ -7,7 +7,7 @@ export const StyledMenu = styled.nav`
   background-color: #ffe195;
   width: 100%;
   max-width: 300px;
-  height: 65vh;
+  height: 30vh;
   border-radius: 0px 0px 5px 5px;
   display: flex;
   flex-direction: column;
@@ -58,86 +58,21 @@ export const UserInfo = styled.li`
   }
 `;
 
-export const AllThemes = styled.li`
-  margin-left: 7px;
-  display: flex;
-  align-items: center;
-  width: 95%;
-  height: 50px;
-  background: #fff2cf;
-  border-radius: 5px;
-  cursor: pointer;
-  &:hover {
-    background-color: #fff79c;
-  }
+export const MenuBase = styled.li`
+margin-left: 7px;
+display: flex;
+align-items: center;
+width: 95%;
+height: 50px;
+background: #fff2cf;
+border-radius: 5px;
+cursor: pointer;
+&:hover {
+  background-color: #fff79c;
+}
 `;
 
-export const Songs = styled.li`
-  margin-left: 7px;
-  display: flex;
-  align-items: center;
-  width: 95%;
-  height: 50px;
-  background: #fff2cf;
-  border-radius: 5px;
-  cursor: pointer;
-  &:hover {
-    background-color: #fff79c;
-  }
-`;
-
-export const Movies = styled.li`
-  margin-left: 7px;
-  display: flex;
-  align-items: center;
-  width: 95%;
-  height: 50px;
-  background: #fff2cf;
-  border-radius: 5px;
-  cursor: pointer;
-  &:hover {
-    background-color: #fff79c;
-  }
-`;
-
-export const Series = styled.li`
-  margin-left: 7px;
-  display: flex;
-  align-items: center;
-  width: 95%;
-  height: 50px;
-  background: #fff2cf;
-  border-radius: 5px;
-  cursor: pointer;
-  &:hover {
-    background-color: #fff79c;
-  }
-`;
-
-export const Books = styled.li`
-  margin-left: 7px;
-  display: flex;
-  align-items: center;
-  width: 95%;
-  height: 50px;
-  background: #fff2cf;
-  border-radius: 5px;
-  cursor: pointer;
-  &:hover {
-    background-color: #fff79c;
-  }
-`;
-
-export const Favorites = styled.li`
-  margin-left: 7px;
-  display: flex;
-  align-items: center;
-  width: 95%;
-  height: 50px;
-  background: #fff2cf;
-  border-radius: 5px;
-  cursor: pointer;
-  &:hover {
-    background-color: #fff79c;
-  }
-`;
+export const PostTheme = styled(MenuBase)`
+`
+export const Favorites = styled(MenuBase)`
+`

@@ -33,8 +33,8 @@ export default function HomePage() {
         </div>
       </StyledHome>
       {themes && <Theme themes={themes} />}
-      {themes.length === 0 && (
-        <Alert>Ainda não há temas cadastrados. Seja o primeiro!</Alert>
+      {themes?.length === 0 && (
+        <Alert>Ainda não há temas postados. Seja o primeiro!</Alert>
       )}
     </>
   );

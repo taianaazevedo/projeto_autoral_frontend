@@ -35,7 +35,25 @@ export const StyledPage = styled.div`
     .images {
       display: flex;
       flex-direction: column;
-      width: 20%;
+      width: 18%;
+      animation: scale-in-hor-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        both;
+      @keyframes scale-in-hor-left {
+        0% {
+          -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+          -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+          -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+          opacity: 1;
+        }
+      }
       @media (max-width: 768px) {
         display: flex;
         flex-direction: row;

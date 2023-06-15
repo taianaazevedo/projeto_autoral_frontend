@@ -31,7 +31,8 @@ export default function Page() {
             <p>
               Citação em Foco é uma plataforma colaborativa de compartilhamento
               de referências que podem ser usadas na sua redação. Aqui, você
-              pode dar e receber dicas dos mais diversos tipos, e ainda aproveita para conhecer novos filmes, séries, livros e músicas!
+              pode dar e receber dicas dos mais diversos tipos, e ainda
+              aproveita para conhecer novos filmes, séries, livros e músicas!
             </p>
           </div>
           <div className="images">
