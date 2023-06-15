@@ -8,12 +8,12 @@ export default function Theme({ themes }) {
         return (
           <StyledTheme key={theme.id}>
             <div className="user-info">
-              <img src={theme.User.imgUrl} />
+              <img src={theme.User.imgUrl} alt="user_img"/>
               <h1>{theme.User.name} postou o tema:</h1>
             </div>
             <p>{theme.title}</p>
             <div className="see-more">
-              <Link to={`/themes/${theme.id}`} className="see-more-link">
+              <Link to={`/theme/${theme.id}`} className="link-to">
                 Ver mais ➔
               </Link>
             </div>

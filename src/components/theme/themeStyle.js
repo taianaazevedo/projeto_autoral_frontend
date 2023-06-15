@@ -4,8 +4,9 @@ export const StyledTheme = styled.article`
   background-color: white;
   width: 50%;
   height: auto;
-  margin: 40px auto;
+  margin: 35px auto;
   border-radius: 10px;
+  border: 1px solid #f2f091;
   p {
     font-weight: bold;
     margin-left: 10px;
@@ -45,12 +46,15 @@ export const StyledTheme = styled.article`
     margin-left: auto;
     margin-right: 15px;
     padding-bottom: 10px;
-    .see-more-link {
+    .link-to {
       background-color: transparent;
       font-size: 15px;
       font-weight: 400;
       color: #f0690e;
       text-decoration: none;
+    }
+    .link-to:hover{
+      color: #768420;
     }
   }
 
@@ -62,6 +66,6 @@ export const StyledTheme = styled.article`
   @media (max-width: 480px) {
     width: 90%;
     height: auto;
-    margin: 50px auto;
+    margin: 30px auto;
   }
 `;

@@ -6,8 +6,8 @@ export const StyledMenu = styled.nav`
   z-index: 2;
   background-color: #ffe195;
   width: 100%;
-  max-width: 250px;
-  height: 68vh;
+  max-width: 300px;
+  height: 65vh;
   border-radius: 0px 0px 5px 5px;
   display: flex;
   flex-direction: column;
@@ -39,11 +39,11 @@ export const StyledMenu = styled.nav`
 `;
 
 export const UserInfo = styled.li`
-  margin-left: 5px;
+  margin-left: 7px;
   display: flex;
   align-items: center;
   width: 95%;
-  height: 51px;
+  height: 50px;
   background: #fff2cf;
   border-radius: 5px;
   cursor: pointer;
@@ -59,11 +59,11 @@ export const UserInfo = styled.li`
 `;
 
 export const AllThemes = styled.li`
-  margin-left: 5px;
+  margin-left: 7px;
   display: flex;
   align-items: center;
   width: 95%;
-  height: 51px;
+  height: 50px;
   background: #fff2cf;
   border-radius: 5px;
   cursor: pointer;
@@ -73,11 +73,11 @@ export const AllThemes = styled.li`
 `;
 
 export const Songs = styled.li`
-  margin-left: 5px;
+  margin-left: 7px;
   display: flex;
   align-items: center;
   width: 95%;
-  height: 51px;
+  height: 50px;
   background: #fff2cf;
   border-radius: 5px;
   cursor: pointer;
@@ -87,11 +87,11 @@ export const Songs = styled.li`
 `;
 
 export const Movies = styled.li`
-  margin-left: 5px;
+  margin-left: 7px;
   display: flex;
   align-items: center;
   width: 95%;
-  height: 51px;
+  height: 50px;
   background: #fff2cf;
   border-radius: 5px;
   cursor: pointer;
@@ -101,11 +101,11 @@ export const Movies = styled.li`
 `;
 
 export const Series = styled.li`
-  margin-left: 5px;
+  margin-left: 7px;
   display: flex;
   align-items: center;
   width: 95%;
-  height: 51px;
+  height: 50px;
   background: #fff2cf;
   border-radius: 5px;
   cursor: pointer;
@@ -115,11 +115,11 @@ export const Series = styled.li`
 `;
 
 export const Books = styled.li`
-  margin-left: 5px;
+  margin-left: 7px;
   display: flex;
   align-items: center;
   width: 95%;
-  height: 51px;
+  height: 50px;
   background: #fff2cf;
   border-radius: 5px;
   cursor: pointer;
@@ -129,11 +129,11 @@ export const Books = styled.li`
 `;
 
 export const Favorites = styled.li`
-  margin-left: 5px;
+  margin-left: 7px;
   display: flex;
   align-items: center;
   width: 95%;
-  height: 51px;
+  height: 50px;
   background: #fff2cf;
   border-radius: 5px;
   cursor: pointer;

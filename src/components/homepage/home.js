@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import { useContext, useState, useEffect } from "react";
 import { StyledHome } from "./homeStyle";
 import logo from "../../assets/notebook.png";
@@ -12,7 +13,7 @@ export default function HomePage() {
   async function getThemesApi() {
     try {
       const themesApi = await getThemes(user.token);
-      setThemes(themesApi)
+      setThemes(themesApi);
     } catch (error) {
       console.log(error.message);
     }
@@ -31,7 +32,21 @@ export default function HomePage() {
           <p className="p2">em Foco</p>
         </div>
       </StyledHome>
-      <Theme themes={themes} />
+      {themes && <Theme themes={themes} />}
+      {themes.length === 0 && (
+        <Alert>Ainda não há temas cadastrados. Seja o primeiro!</Alert>
+      )}
     </>
   );
 }
+
+const Alert = styled.p`
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: transparent;
+  padding-top: 5rem;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #505050;
+`;

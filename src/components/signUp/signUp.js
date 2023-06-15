@@ -7,7 +7,7 @@ export default function SignUpPage() {
   const navigate = useNavigate();
 
   function navToSignIn(){
-    navigate("/")
+    navigate("/sign-in")
   }
 
   return (

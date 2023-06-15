@@ -21,7 +21,7 @@ time, mark, audio, video, main {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-	background-color: #f5f5f5;
+	background-color: #e6f0cc;
 	font-family: 'Nunito', 'sans-serif';
 }
 input {
@@ -50,6 +50,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 
 `;
 

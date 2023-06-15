@@ -4,7 +4,7 @@ export const StyledHome = styled.main`
   background-color: transparent;
   display: flex;
   flex-direction: column;
-  margin-top: 65px;
+  margin-top: 75px;
   align-items: center;
   z-index: 1;
   .logo {
