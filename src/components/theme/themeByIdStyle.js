@@ -66,3 +66,4 @@ export const StyledThemeById = styled.article`
     margin: 65px auto;
   }
 `;
+

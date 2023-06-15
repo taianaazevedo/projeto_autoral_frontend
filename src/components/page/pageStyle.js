@@ -36,6 +36,7 @@ export const StyledPage = styled.div`
       display: flex;
       flex-direction: column;
       width: 18%;
+      padding-bottom: 10px;
       animation: scale-in-hor-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
         both;
       @keyframes scale-in-hor-left {

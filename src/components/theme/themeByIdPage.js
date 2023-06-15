@@ -2,6 +2,8 @@ import { useContext, useEffect, useState } from "react";
 import { getThemeById } from "../../services/themeApi";
 import { UserContext } from "../../contexts/userContext";
 import { StyledThemeById } from "./themeByIdStyle";
+import BackToHome from "../backToHomeButton/buttonToHome";
+
 
 export default function ThemeById({ id }) {
   const { user } = useContext(UserContext);
@@ -31,7 +33,6 @@ export default function ThemeById({ id }) {
         </div>
         <div className="references">
           <p>Referências:</p>
-
           <div className="music">
             <p>
               Música:{" "}
@@ -106,6 +107,7 @@ export default function ThemeById({ id }) {
           </div>
         </div>
       </StyledThemeById>
+      <BackToHome/>
     </>
   );
 }
