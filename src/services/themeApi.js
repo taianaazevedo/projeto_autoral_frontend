@@ -29,3 +29,14 @@ export async function getFavorites(token){
     const response = await api.get("/favorite", config);
     return response.data;
 }
+
+export async function postFavorite(token, id){
+  const body = { theme_id: id };
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+    const response = await api.post("/favorite", body, config);
+    return response.data;
+}

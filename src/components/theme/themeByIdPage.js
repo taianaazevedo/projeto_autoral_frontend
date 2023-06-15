@@ -1,5 +1,9 @@
 import { useContext, useEffect, useState } from "react";
-import { getFavorites, getThemeById } from "../../services/themeApi";
+import {
+  getFavorites,
+  getThemeById,
+  postFavorite,
+} from "../../services/themeApi";
 import { UserContext } from "../../contexts/userContext";
 import { StyledThemeById } from "./themeByIdStyle";
 import BackToHome from "../backToHomeButton/buttonToHome";
@@ -21,6 +25,15 @@ export default function ThemeById({ id }) {
 
       setThemeById(themeData);
       setIsMyFavorite(isFavorite);
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
+  async function postMyFavorite() {
+    try {
+      await postFavorite(user.token, themeById.id);
+      setIsMyFavorite(true);
     } catch (error) {
       console.log(error.message);
     }
@@ -121,8 +134,12 @@ export default function ThemeById({ id }) {
               </>
             ) : (
               <>
-                <p>Favoritar</p>
-                <BsBalloonHeart size={25} style={{ color: "#5d5d5d" }} />
+                <p>Salvar nos favoritos</p>
+                <BsBalloonHeart
+                  size={25}
+                  style={{ color: "#5d5d5d", cursor: "pointer" }}
+                  onClick={postMyFavorite}
+                />
               </>
             )}
           </div>
