@@ -19,3 +19,13 @@ export async function getThemeById(token, id){
     const response = await api.get(`/theme/${id}`, config);
     return response.data;
 }
+
+export async function getFavorites(token){
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+    const response = await api.get("/favorite", config);
+    return response.data;
+}

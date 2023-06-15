@@ -1,18 +1,26 @@
 import { useContext, useEffect, useState } from "react";
-import { getThemeById } from "../../services/themeApi";
+import { getFavorites, getThemeById } from "../../services/themeApi";
 import { UserContext } from "../../contexts/userContext";
 import { StyledThemeById } from "./themeByIdStyle";
 import BackToHome from "../backToHomeButton/buttonToHome";
-
+import { BsBalloonHeart, BsBalloonHeartFill } from "react-icons/bs";
 
 export default function ThemeById({ id }) {
   const { user } = useContext(UserContext);
   const [themeById, setThemeById] = useState([]);
+  const [isMyFavorite, setIsMyFavorite] = useState(false);
 
   async function getThemeByIdApi() {
     try {
+      const favorites = await getFavorites(user.token);
       const themeData = await getThemeById(user.token, id);
+
+      const isFavorite = favorites.some(
+        (favorite) => favorite.Theme.id === themeData.id
+      );
+
       setThemeById(themeData);
+      setIsMyFavorite(isFavorite);
     } catch (error) {
       console.log(error.message);
     }
@@ -105,9 +113,22 @@ export default function ThemeById({ id }) {
               )}
             </p>
           </div>
+          <div className="favorite">
+            {isMyFavorite ? (
+              <>
+                <p>Salvo nos favoritos</p>
+                <BsBalloonHeartFill size={25} style={{ color: "red" }} />
+              </>
+            ) : (
+              <>
+                <p>Favoritar</p>
+                <BsBalloonHeart size={25} style={{ color: "#5d5d5d" }} />
+              </>
+            )}
+          </div>
         </div>
       </StyledThemeById>
-      <BackToHome/>
+      <BackToHome />
     </>
   );
 }

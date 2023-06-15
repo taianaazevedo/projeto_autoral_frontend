@@ -37,6 +37,18 @@ export const StyledThemeById = styled.article`
       font-size: 1.2rem;
     }
   }
+  .favorite {
+    margin-top: 10px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      color: #5d5d5d;
+      font-size: 1rem;
+      margin-right: 5px;
+    }
+  }
   .author-post {
     background-color: white;
     border-radius: 10px;
@@ -66,4 +78,3 @@ export const StyledThemeById = styled.article`
     margin: 65px auto;
   }
 `;
-
