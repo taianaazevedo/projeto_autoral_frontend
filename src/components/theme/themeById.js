@@ -6,7 +6,7 @@ import {
 } from "../../services/themeApi";
 import { UserContext } from "../../contexts/userContext";
 import { StyledThemeById } from "./themeByIdStyle";
-import BackToHome from "../backToHomeButton/buttonToHome";
+import BackToHome from "../backToHome/buttonToHome";
 import { BsBalloonHeart, BsBalloonHeartFill } from "react-icons/bs";
 
 export default function ThemeById({ id }) {
@@ -64,7 +64,7 @@ export default function ThemeById({ id }) {
               )}
             </p>
             <p>
-              Intérprete:{" "}
+              Cantor(a):{" "}
               {themeById?.Song?.length > 0 ? (
                 <span>{themeById?.Song[0]?.performer}</span>
               ) : (
@@ -120,7 +120,7 @@ export default function ThemeById({ id }) {
             <p>
               Autor(a):{" "}
               {themeById?.Book?.length > 0 ? (
-                <span>{themeById?.Serie[0]?.author}</span>
+                <span>{themeById?.Book[0]?.author}</span>
               ) : (
                 <span>-</span>
               )}
@@ -134,7 +134,7 @@ export default function ThemeById({ id }) {
               </>
             ) : (
               <>
-                <p>Salvar nos favoritos</p>
+                <p>Favoritar</p>
                 <BsBalloonHeart
                   size={25}
                   style={{ color: "#5d5d5d", cursor: "pointer" }}

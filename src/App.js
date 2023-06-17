@@ -5,6 +5,7 @@ import SignUp from "./pages/signUpPage/signUp";
 import Home from "./pages/homePage/home";
 import ThemePage from "./pages/themePage/themePage";
 import FirstPage from "./pages/firstPage/firstPage";
+import PostTheme from "./pages/postPage/postTheme";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/home" element={<Home />} />
             <Route path="/theme/:id" element={<ThemePage />} />
+            <Route path="/create-theme" element={<PostTheme />} />
           </Routes>
         </UserProvider>
       </BrowserRouter>

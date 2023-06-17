@@ -1,20 +1,34 @@
 import { StyledMenu, UserInfo, PostTheme, Favorites } from "./menuStyle";
 import { UserContext } from "../../contexts/userContext";
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Menu() {
   const { user } = useContext(UserContext);
+  const navigate = useNavigate()
+
+  function goToPostTheme(){
+    navigate("/create-theme")
+  }
+
+  function goToFavorites(){
+    navigate("/favorite")
+  }
+
+  function goToMyProfile(){
+    navigate("/my-profile")
+  }
 
   return (
     <StyledMenu>
-      <UserInfo>
+      <UserInfo onClick={goToMyProfile}>
         <img src={user.imgUrl} alt="user_image" />
         <p>Meu perfil</p>
       </UserInfo>
-      <Favorites>
+      <Favorites onClick={goToFavorites}>
         <p>• Meus favoritos</p>
       </Favorites>
-      <PostTheme>
+      <PostTheme onClick={goToPostTheme}>
         <p>• Postar um tema</p>
       </PostTheme>
     </StyledMenu>

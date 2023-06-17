@@ -38,7 +38,7 @@ export const StyledMenu = styled.nav`
   }
 `;
 
-export const UserInfo = styled.li`
+export const MenuBase = styled.li`
   margin-left: 7px;
   display: flex;
   align-items: center;
@@ -47,32 +47,19 @@ export const UserInfo = styled.li`
   background: #fff2cf;
   border-radius: 5px;
   cursor: pointer;
+  &:hover {
+    background-color: #fff79c;
+  }
+`;
+
+export const UserInfo = styled(MenuBase)`
   img {
     margin-left: 5px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
   }
-  &:hover {
-    background-color: #fff79c;
-  }
 `;
 
-export const MenuBase = styled.li`
-margin-left: 7px;
-display: flex;
-align-items: center;
-width: 95%;
-height: 50px;
-background: #fff2cf;
-border-radius: 5px;
-cursor: pointer;
-&:hover {
-  background-color: #fff79c;
-}
-`;
-
-export const PostTheme = styled(MenuBase)`
-`
-export const Favorites = styled(MenuBase)`
-`
+export const PostTheme = styled(MenuBase)``;
+export const Favorites = styled(MenuBase)``;
