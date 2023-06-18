@@ -32,8 +32,9 @@ export default function HomePage() {
           <p className="p2">em Foco</p>
         </div>
       </StyledHome>
-      {themes && <Theme themes={themes} />}
-      {themes?.length === 0 && (
+      {themes?.length > 0 ? (
+        <Theme themes={themes} />
+      ) : (
         <Alert>Ainda não há temas postados. Seja o primeiro!</Alert>
       )}
     </>

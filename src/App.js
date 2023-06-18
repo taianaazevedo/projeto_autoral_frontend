@@ -6,6 +6,7 @@ import Home from "./pages/homePage/home";
 import ThemePage from "./pages/themePage/themePage";
 import FirstPage from "./pages/firstPage/firstPage";
 import PostTheme from "./pages/postPage/postTheme";
+import Favorite from "./pages/favoritePage/favorite";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/theme/:id" element={<ThemePage />} />
             <Route path="/create-theme" element={<PostTheme />} />
+            <Route path="/favorites" element={<Favorite />} />
           </Routes>
         </UserProvider>
       </BrowserRouter>

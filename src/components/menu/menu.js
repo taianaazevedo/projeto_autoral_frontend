@@ -12,7 +12,7 @@ export default function Menu() {
   }
 
   function goToFavorites(){
-    navigate("/favorite")
+    navigate("/favorites")
   }
 
   function goToMyProfile(){

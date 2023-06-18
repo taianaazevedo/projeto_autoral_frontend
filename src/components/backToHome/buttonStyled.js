@@ -6,6 +6,7 @@ export const StyledButtonBackToHome = styled.div`
   right: 50px;
   border-radius: 20px;
   background-color: #ffffff;
+  border: 1px solid #e85a0b;
   .link-home,
   p {
     background-color: transparent;
@@ -24,6 +25,7 @@ export const StyledButtonBackToHome = styled.div`
 
   @media (max-width: 480px) {
     position: fixed;
-    bottom: 10;
+    bottom: 10px;
+    right: 10px;
   }
 `;

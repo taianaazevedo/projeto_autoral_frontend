@@ -53,6 +53,16 @@ export async function postFavorite(token, id){
     return response.data;
 }
 
+export async function getFavorite(token){
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+    const response = await api.get("/favorite", config);
+    return response.data;
+}
+
 export async function postSong(token, title, performer, theme_id){
   const body = { title, performer, theme_id };
   const config = {
