@@ -42,27 +42,36 @@ export const StyledBox = styled.div`
     padding-top: 10px;
     margin-left: 10px;
     img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+    h1 {
+      background-color: transparent;
+      font-weight: 700;
+      padding-top: 10px;
+      font-size: 1.1rem;
+      margin-left: 10px;
+      color: #768420;
+    }
   }
-  h1 {
-    background-color: transparent;
-    font-weight: 700;
-    padding-top: 10px;
-    font-size: 1.1rem;
-    margin-left: 10px;
-    color: #768420;
-  }
-}
-  .see-more {
+  .options {
     background-color: transparent;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     margin-left: auto;
     margin-right: 15px;
     padding-bottom: 10px;
+    .delete, span {
+        margin-left: 10px;
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+      font-size: 15px;
+      font-weight: 400;
+      color: #f0690e;
+    }
     .link-to {
       background-color: transparent;
       font-size: 15px;
@@ -70,8 +79,10 @@ export const StyledBox = styled.div`
       color: #f0690e;
       text-decoration: none;
     }
-    .link-to:hover{
+    .link-to:hover,
+    .delete:hover, span:hover {
       color: #768420;
+      cursor: pointer;
     }
   }
 
@@ -85,4 +96,4 @@ export const StyledBox = styled.div`
     height: auto;
     margin: 30px auto;
   }
-`
+`;

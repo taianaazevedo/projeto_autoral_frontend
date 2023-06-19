@@ -14,7 +14,6 @@ export default function FavoritePage() {
     try {
       const favorites = await getFavorite(user.token);
       setFavorites(favorites);
-      console.log(favorites);
     } catch (error) {
       console.log(error.message);
     }
@@ -29,7 +28,11 @@ export default function FavoritePage() {
       <StyledFavorite>
         <h1>Meus temas favoritos</h1>
         {favorites?.length > 0 ? (
-          <FavoriteBox favorites={favorites} />
+          <FavoriteBox
+            favorites={favorites}
+            setFavorites={setFavorites}
+            user={user}
+          />
         ) : (
           <Alert>Você ainda não salvou nenhum tema.</Alert>
         )}

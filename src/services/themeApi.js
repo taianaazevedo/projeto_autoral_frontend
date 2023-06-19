@@ -29,7 +29,17 @@ export async function getFavorites(token){
     const response = await api.get("/favorite", config);
     return response.data;
 }
-///////
+
+export async function deleteFavorite(token, id){
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+    const response = await api.delete(`/favorite/${id}`, config);
+    return response.data;
+}
+
 
 export async function postTheme(token, title){
   const body = { title };

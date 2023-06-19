@@ -27,7 +27,7 @@ export default function FormSignUp() {
       );
       navigate("/");
     } catch (error) {
-      alert("Algo deu errado, por favor, tente novamente");
+      alert(error.response.data.details[0]);
     }
   }
 
