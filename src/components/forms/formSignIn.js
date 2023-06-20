@@ -19,7 +19,7 @@ export default function FormSignIn({ setUser }) {
       localStorage.setItem("user", JSON.stringify({ id, name, imgUrl, token }))     
       navigate("/home")
     } catch (error) {
-      console.log(error)
+      alert(error.response.data.message)
     }   
   }
 

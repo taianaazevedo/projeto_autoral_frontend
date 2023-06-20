@@ -3,16 +3,16 @@ import { UserContext } from "../../contexts/userContext";
 import styled from "styled-components";
 import { StyledFavorite } from "./favoriteStyle";
 import BackToHome from "../backToHome/buttonToHome";
-import { getFavorite } from "../../services/themeApi";
+import { getFavorites } from "../../services/themeApi";
 import FavoriteBox from "./favoriteBox";
 
 export default function FavoritePage() {
   const { user } = useContext(UserContext);
   const [favorites, setFavorites] = useState([]);
 
-  async function getFavorites() {
+  async function getFavoritesFromUser() {
     try {
-      const favorites = await getFavorite(user.token);
+      const favorites = await getFavorites(user.token);
       setFavorites(favorites);
     } catch (error) {
       console.log(error.message);
@@ -20,7 +20,7 @@ export default function FavoritePage() {
   }
 
   useEffect(() => {
-    getFavorites();
+    getFavoritesFromUser();
   }, []);
 
   return (

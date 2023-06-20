@@ -23,7 +23,7 @@ export const HeaderContainer = styled.header`
     position: relative;
     ul {
       position: absolute;
-      top: 120%;
+      top: 125%;
       left: 0;
       background-color: #ffffff;
       width: 100%;

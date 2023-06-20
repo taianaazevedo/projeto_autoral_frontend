@@ -27,7 +27,10 @@ export default function FormSignUp() {
       );
       navigate("/");
     } catch (error) {
-      alert(error.response.data.details[0]);
+      if (error.response.status === 409) return alert("O e-mail já está em uso.");
+      if(error.response.status === 400) {
+        alert("Dados inválidos.")
+      }
     }
   }
 
@@ -67,7 +70,7 @@ export default function FormSignUp() {
         {...register("Senha", { required: "Password is required" })}
         aria-invalid={errors.Senha ? "true" : "false"}
       />
-      {errors.Senha && <p className="alert">{errors.Senha?.message}</p>}
+      {errors.Senha && <p className="alert">Password is required</p>}
       <input
         type="password"
         name="ConfirmPassword"

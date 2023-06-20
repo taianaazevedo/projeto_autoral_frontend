@@ -8,8 +8,7 @@ export const StyledThemeById = styled.article`
     background-color: white;
     border-radius: 10px;
     font-weight: 700;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 10px;
     font-size: 1.5rem;
     color: #5d5d5d;
     text-align: center;

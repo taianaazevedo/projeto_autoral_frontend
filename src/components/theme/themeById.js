@@ -18,11 +18,9 @@ export default function ThemeById({ id }) {
     try {
       const favorites = await getFavorites(user.token);
       const themeData = await getThemeById(user.token, id);
-
       const isFavorite = favorites.some(
         (favorite) => favorite.Theme.id === themeData.id
       );
-
       setThemeById(themeData);
       setIsMyFavorite(isFavorite);
     } catch (error) {

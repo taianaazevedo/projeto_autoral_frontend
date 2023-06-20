@@ -87,7 +87,7 @@ export default function Header() {
             <ul ref={searchBarRef}>
               {resultSearch?.length ? (
                 resultSearch.map((theme) => (
-                  <li key={theme.id} onClick={() => navigateToTheme(theme.id)}>{theme.title}</li>
+                  <li key={theme.id} onClick={() => navigateToTheme(theme.id)}>• {theme.title}</li>
                 ))
               ) : (
                 <li>Nenhum resultado encontrado</li>

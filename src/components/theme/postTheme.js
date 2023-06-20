@@ -24,7 +24,11 @@ export default function Post() {
       setSend("✓");
       setIsDisable(true);
     } catch (error) {
-      console.log(error);
+      if(error.response.status === 409){
+        alert("Esse tema já existe. Busque por ele na barra de pesquisa! =)")
+      } else {
+        alert(error.response.data.message);
+      }      
       setSend("Criar");
       setIsDisable(false);
     }
