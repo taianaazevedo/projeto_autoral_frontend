@@ -20,6 +20,16 @@ export async function getThemeById(token, id){
     return response.data;
 }
 
+export async function getThemeBySearch(token, search){
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+    const response = await api.get(`/theme?search=${search}`, config);
+    return response.data;
+}
+
 export async function getFavorites(token){
   const config = {
     headers: {
