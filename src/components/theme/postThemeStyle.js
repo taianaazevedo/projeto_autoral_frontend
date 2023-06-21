@@ -4,12 +4,13 @@ export const StyledPost = styled.div`
   margin: 80px auto 30px auto;
   width: 50%;
   h1 {
-    font-weight: bold;
+    font-family: "Gochi Hand";
+    font-weight: 400;
     margin-left: 10px;
     margin-right: 10px;
     background-color: transparent;
     padding-top: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-align: center;
     color: #505050;
     padding-bottom: 10px;

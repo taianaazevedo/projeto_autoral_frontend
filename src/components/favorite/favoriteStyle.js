@@ -8,10 +8,11 @@ export const StyledFavorite = styled.main`
   align-items: center;
   z-index: 1;
   h1 {
-    font-weight: 700;
+    font-family: "Gochi Hand";
+    font-weight: 400;
     padding-top: 15px;
     padding-bottom: 15px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #5d5d5d;
     text-align: center;
   }
@@ -47,6 +48,7 @@ export const StyledBox = styled.div`
       border-radius: 50%;
     }
     h1 {
+      font-family: "Nunito";
       background-color: transparent;
       font-weight: 700;
       padding-top: 10px;

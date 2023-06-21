@@ -9,6 +9,7 @@ export const StyledButtonBackToHome = styled.div`
   border: 1px solid #e85a0b;
   .link-home,
   p {
+    font-family: "Gochi Hand";
     background-color: transparent;
     padding: 5px;
     display: flex;
@@ -16,7 +17,7 @@ export const StyledButtonBackToHome = styled.div`
     align-items: center;
     text-decoration: none;
     color: #e85a0b;
-    font-weight: 600;
+    font-weight: 400;
   }
   @media (max-width: 768px) {
     bottom: 30px;

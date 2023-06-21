@@ -30,8 +30,9 @@ export const StyledMenu = styled.nav`
     }
   }
   p {
+    font-family: "Gochi Hand";
     background-color: transparent;
-    font-weight: 400;
+    font-weight: 200;
     font-size: 20px;
     color: #505050;
     margin-left: 8px;

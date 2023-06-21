@@ -7,11 +7,12 @@ export const StyledReferences = styled.div`
   flex-direction: column;
   justify-content: space-around;
   h1 {
-    font-weight: bold;
+    font-family: "Gochi Hand";
+    font-weight: 400;
     margin-left: 10px;
     margin-right: 10px;
     background-color: transparent;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-align: center;
     color: #505050;
     padding-bottom: 10px;
@@ -33,10 +34,11 @@ export const StyledForm = styled.div`
   margin-top: 20px;
   margin-bottom: 10px;
   p {
+    font-family: "Gochi Hand";
     background-color: transparent;
     color: #505050;
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: 400;
   }
   form {
     background-color: transparent;

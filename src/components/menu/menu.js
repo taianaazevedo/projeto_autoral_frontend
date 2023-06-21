@@ -23,7 +23,7 @@ export default function Menu() {
     <StyledMenu>
       <UserInfo onClick={goToMyProfile}>
         <img src={user.imgUrl} alt="user_image" />
-        <p>Meu perfil</p>
+        <p>Meus posts</p>
       </UserInfo>
       <Favorites onClick={goToFavorites}>
         <p>• Meus favoritos</p>
