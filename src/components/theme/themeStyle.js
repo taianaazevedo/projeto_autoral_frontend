@@ -102,7 +102,6 @@ export const StyledBox = styled(Base)`
     font-weight: 400;
     color: #f0690e;
   }
-  .edit:hover,
   span:hover,
   .delete:hover {
     color: #768420;
@@ -136,8 +135,7 @@ export const Title = styled.h1`
 export const StyledEdit = styled.main`
   margin: 80px auto 30px auto;
   width: 50%;
-  h1,
-  .infos {
+  h1 {
     font-family: "Gochi Hand";
     font-weight: 400;
     margin-left: 10px;
@@ -149,21 +147,97 @@ export const StyledEdit = styled.main`
     color: #505050;
     padding-bottom: 10px;
   }
-  .infos {
-    font-size: 1.2rem;
-  }
-  .details {
-    width: 100%;
-    background-color: #ffffff;
+  .theme,
+  .edit-theme,
+  .music,
+  .edit-music,
+  .movie,
+  .edit-movie,
+  .serie,
+  .edit-serie,
+  .book,
+  .edit-book {
     padding: 10px;
-    border-radius: 5px;
-    margin: 10px;
     display: flex;
-    p {
-      background-color: transparent;
-      color: #505050;
-      font-weight: 400;
-      font-size: 1.2rem;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  p {
+    background-color: transparent;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #505050;
+  }
+  button {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #ffffff;
+    width: 13%;
+    height: 31px;
+    background: #ffa438;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  .edit-theme {
+    margin-top: 10px;
+    input {
+      width: 80%;
+      height: 30px;
+      border-radius: 5px;
+      border: 1px solid #fff2cf;
+    }
+  }
+  .edit-music,
+  .edit-movie,
+  .edit-serie,
+  .edit-book {
+    margin-top: 10px;
+    input {
+      width: 40%;
+      height: 30px;
+      border-radius: 5px;
+      border: 1px solid #fff2cf;
+    }
+  }
+  @media (min-width: 481px) and (max-width: 800px) {
+    width: 90%;
+  }
+
+  @media (min-width: 100px) and (max-width: 480px) {
+    width: 90%;
+    button {
+      width: 20%;
+    }
+    .edit-theme,
+    .edit-music,
+    .edit-movie,
+    .edit-serie,
+    .edit-book {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      background-color: #ffffff;
+      border-radius: 5px;
+      margin-top: 10px;
+      button {
+        margin-top: 5px;
+        width: 20%;
+      }
+      input {
+        margin-top: 5px;
+        width: 90%;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid #fff2cf;
+      }
     }
   }
 `;

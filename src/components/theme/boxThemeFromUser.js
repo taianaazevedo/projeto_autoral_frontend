@@ -5,14 +5,11 @@ import { BsTrash } from "react-icons/bs";
 import { deleteTheme } from "../../services/themeApi";
 
 export default function BoxTheme({ themes, setThemes, user }) {
-
   async function deleteThemeById(id) {
     try {
       await deleteTheme(user.token, id);
       alert("Tema excluído com sucesso!");
-      setThemes((prevThemes) =>
-      prevThemes.filter((theme) => theme.id !== id)
-    );
+      setThemes((prevThemes) => prevThemes.filter((theme) => theme.id !== id));
     } catch (error) {
       alert(error.response.data.message);
     }
@@ -32,8 +29,9 @@ export default function BoxTheme({ themes, setThemes, user }) {
                 <BsTrash />
                 <span>Excluir</span>
               </div>
-              <Link to={`/theme/${theme.id}`} className="link-to">
-                Ver mais ➔
+              <Link to={`/edit/${theme.id}`} className="link-to">
+                <LuEdit style={{ margin: '5px' }} />
+                Editar
               </Link>
             </div>
           </StyledBox>

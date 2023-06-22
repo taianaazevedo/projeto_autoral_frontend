@@ -8,6 +8,7 @@ import FirstPage from "./pages/firstPage/firstPage";
 import PostTheme from "./pages/postPage/postTheme";
 import Favorite from "./pages/favoritePage/favorite";
 import MyThemes from "./pages/myThemesPage/myThemes";
+import EditPage from "./pages/editPage/editPage";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path="/theme/create-theme" element={<PostTheme />} />
             <Route path="/favorites" element={<Favorite />} />
             <Route path="/my-profile" element={<MyThemes />} />
+            <Route path="/edit/:id" element={<EditPage />} />
           </Routes>
         </UserProvider>
       </BrowserRouter>
