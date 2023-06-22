@@ -8,7 +8,7 @@ export default function Menu() {
   const navigate = useNavigate()
 
   function goToPostTheme(){
-    navigate("/create-theme")
+    navigate("/theme/create-theme")
   }
 
   function goToFavorites(){

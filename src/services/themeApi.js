@@ -51,6 +51,16 @@ export async function postTheme(token, title) {
   return response.data;
 }
 
+export async function deleteTheme(token, id) {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  const response = await api.delete(`/theme/${id}`, config);
+  return response.data;
+}
+
 export async function getFavorites(token) {
   const config = {
     headers: {

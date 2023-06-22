@@ -26,7 +26,7 @@ export default function ThemesFromUser() {
     <>
       <Title>Meus posts</Title>
       {themes?.length > 0 ? (
-        <BoxTheme themes={themes} />
+        <BoxTheme themes={themes} user={user} setThemes={setThemes}/>
       ) : (
         <Alert>Você ainda não criou nenhum tema.</Alert>
       )}

@@ -25,7 +25,7 @@ export default function FormSignUp() {
         data.ConfirmPassword,
         data.Url
       );
-      navigate("/");
+      navigate("/sign-in");
     } catch (error) {
       if (error.response.status === 409) return alert("O e-mail já está em uso.");
       if(error.response.status === 400) {

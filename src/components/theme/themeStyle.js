@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const Base = styled.article`
   background-color: white;
   width: 50%;
@@ -70,12 +69,46 @@ export const Base = styled.article`
     margin: 30px auto;
   }
 `;
-
 export const StyledTheme = styled(Base)``;
 
 export const StyledBox = styled(Base)`
-
-`
+  .user-info {
+    justify-content: space-between;
+  }
+  .delete {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    color: #f0690e;
+  }
+  .see-more {
+    margin-top: 10px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-left: 15px;
+    padding-bottom: 10px;
+  }
+  .link-to,
+  span {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 400;
+    color: #f0690e;
+  }
+  .edit:hover,
+  span:hover,
+  .delete:hover {
+    color: #768420;
+    cursor: pointer;
+  }
+`;
 
 export const Alert = styled.p`
   font-weight: bold;
@@ -89,7 +122,7 @@ export const Alert = styled.p`
 `;
 
 export const Title = styled.h1`
- font-family: "Gochi Hand";
+  font-family: "Gochi Hand";
   font-weight: 400;
   margin-left: 10px;
   margin-right: 10px;
@@ -98,4 +131,39 @@ export const Title = styled.h1`
   font-size: 1.8rem;
   text-align: center;
   color: #505050;
+`;
+
+export const StyledEdit = styled.main`
+  margin: 80px auto 30px auto;
+  width: 50%;
+  h1,
+  .infos {
+    font-family: "Gochi Hand";
+    font-weight: 400;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: transparent;
+    padding-top: 1rem;
+    font-size: 1.8rem;
+    text-align: center;
+    color: #505050;
+    padding-bottom: 10px;
+  }
+  .infos {
+    font-size: 1.2rem;
+  }
+  .details {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    display: flex;
+    p {
+      background-color: transparent;
+      color: #505050;
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
+  }
 `;
