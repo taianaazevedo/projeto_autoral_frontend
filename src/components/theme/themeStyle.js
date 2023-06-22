@@ -192,7 +192,7 @@ export const StyledEdit = styled.main`
       width: 80%;
       height: 30px;
       border-radius: 5px;
-      border: 1px solid #fff2cf;
+      border: 1px solid #768420;
     }
   }
   .edit-music,
@@ -204,7 +204,7 @@ export const StyledEdit = styled.main`
       width: 40%;
       height: 30px;
       border-radius: 5px;
-      border: 1px solid #fff2cf;
+      border: 1px solid #768420;
     }
   }
   @media (min-width: 481px) and (max-width: 800px) {
@@ -234,10 +234,7 @@ export const StyledEdit = styled.main`
       input {
         margin-top: 5px;
         width: 90%;
-        height: 30px;
-        border-radius: 5px;
-        border: 1px solid #fff2cf;
-      }
+       }
     }
   }
 `;

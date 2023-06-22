@@ -61,6 +61,17 @@ export async function deleteTheme(token, id) {
   return response.data;
 }
 
+export async function updateTitle(token, id, title) {
+  const body = { title };
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  const response = await api.patch(`/theme/${id}`, body, config);
+  return response.data;
+}
+
 export async function getFavorites(token) {
   const config = {
     headers: {
@@ -92,6 +103,16 @@ export async function deleteFavorite(token, id) {
   return response.data;
 }
 
+export async function updateSong(token, id, title, performer) {
+  const body = { id, title, performer };
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  const response = await api.patch("/song", body, config);
+  return response.data;
+}
 
 export async function postSong(token, title, performer, theme_id) {
   const body = { title, performer, theme_id };
@@ -115,6 +136,17 @@ export async function postMovie(token, title, streaming, theme_id) {
   return response.data;
 }
 
+export async function updateMovie(token, id, title, streaming) {
+  const body = { id, title, streaming };
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  const response = await api.patch("/movie", body, config);
+  return response.data;
+}
+
 export async function postSerie(token, title, streaming, theme_id) {
   const body = { title, streaming, theme_id };
   const config = {
@@ -126,6 +158,17 @@ export async function postSerie(token, title, streaming, theme_id) {
   return response.data;
 }
 
+export async function updateSerie(token, id, title, streaming) {
+  const body = { id, title, streaming };
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  const response = await api.patch("/serie", body, config);
+  return response.data;
+}
+
 export async function postBook(token, title, author, theme_id) {
   const body = { title, author, theme_id };
   const config = {
@@ -134,5 +177,16 @@ export async function postBook(token, title, author, theme_id) {
     },
   };
   const response = await api.post("/book", body, config);
+  return response.data;
+}
+
+export async function updateBook(token, id, title, author) {
+  const body = { id, title, author };
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  const response = await api.patch("/book", body, config);
   return response.data;
 }
