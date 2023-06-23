@@ -54,6 +54,7 @@ export default function Edit() {
       await updateTitle(user.token, theme.id, themeForm.theme);
       alert("Título atualizado com sucesso! :)");
       setThemeForm({ theme: "" });
+      setEditTheme(false);
     } catch (error) {
       console.log(error);
     }
@@ -74,6 +75,7 @@ export default function Edit() {
       );
       alert("Música atualizada com sucesso");
       setSongForm({ title: "", performer: "" });
+      setEditSong(false)
     } catch (error) {
       console.log(error);
     }
@@ -94,6 +96,7 @@ export default function Edit() {
       );
       alert("Filme atualizado com sucesso");
       setMovieForm({ title: "", streaming: "" });
+      setEditMovie(false)
     } catch (error) {
       console.log(error);
     }
@@ -114,6 +117,7 @@ export default function Edit() {
       );
       alert("Série atualizada com sucesso");
       setSerieForm({ title: "", streaming: "" });
+      setEditSerie(false);
     } catch (error) {
       console.log(error);
     }
@@ -134,6 +138,7 @@ export default function Edit() {
       );
       alert("Livro atualizado com sucesso");
       setBookForm({ title: "", author: "" });
+      setEditBook(false)
     } catch (error) {
       console.log(error);
     }
