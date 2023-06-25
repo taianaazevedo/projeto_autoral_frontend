@@ -8,7 +8,11 @@ import {
   updateSong,
   updateMovie,
   updateSerie,
-  updateBook
+  updateBook,
+  postSong,
+  postMovie,
+  postBook,
+  postSerie,
 } from "../../services/themeApi";
 
 export default function Edit() {
@@ -56,7 +60,12 @@ export default function Edit() {
       setThemeForm({ theme: "" });
       setEditTheme(false);
     } catch (error) {
-      console.log(error);
+      if (error.response.status === 409) {
+        alert("Esse tema já existe. Busque por ele na barra de pesquisa! =)");
+      }
+      if (error.response.status === 400) {
+        alert("O título precisa ter mais de 5 caracteres");
+      }
     }
   }
 
@@ -67,15 +76,25 @@ export default function Edit() {
   async function handleEditSong(e) {
     e.preventDefault();
     try {
-      await updateSong(
-        user.token,
-        theme.Song[0].id,
-        songForm.title,
-        songForm.performer
-      );
+      if (theme.Song.length === 0) {
+        await postSong(
+          user.token,
+          songForm.title,
+          songForm.performer,
+          theme.id
+        );
+      } else {
+        await updateSong(
+          user.token,
+          theme.Song[0].id,
+          songForm.title,
+          songForm.performer
+        );
+      }
+
       alert("Música atualizada com sucesso");
       setSongForm({ title: "", performer: "" });
-      setEditSong(false)
+      setEditSong(false);
     } catch (error) {
       console.log(error);
     }
@@ -88,15 +107,25 @@ export default function Edit() {
   async function handleEditMovie(e) {
     e.preventDefault();
     try {
-      await updateMovie(
-        user.token,
-        theme.Movie[0].id,
-        movieForm.title,
-        movieForm.streaming
-      );
+      if (theme.Movie.length === 0) {
+        await postMovie(
+          user.token,
+          movieForm.title,
+          movieForm.streaming,
+          theme.id
+        );
+      } else {
+        await updateMovie(
+          user.token,
+          theme.Movie[0].id,
+          movieForm.title,
+          movieForm.streaming
+        );
+      }
+
       alert("Filme atualizado com sucesso");
       setMovieForm({ title: "", streaming: "" });
-      setEditMovie(false)
+      setEditMovie(false);
     } catch (error) {
       console.log(error);
     }
@@ -109,12 +138,21 @@ export default function Edit() {
   async function handleEditSerie(e) {
     e.preventDefault();
     try {
-      await updateSerie(
-        user.token,
-        theme.Serie[0].id,
-        serieForm.title,
-        serieForm.streaming
-      );
+      if (theme.Serie.length === 0) {
+        await postSerie(
+          user.token,
+          serieForm.title,
+          serieForm.streaming,
+          theme.id
+        );
+      } else {
+        await updateSerie(
+          user.token,
+          theme.Serie[0].id,
+          serieForm.title,
+          serieForm.streaming
+        );
+      }
       alert("Série atualizada com sucesso");
       setSerieForm({ title: "", streaming: "" });
       setEditSerie(false);
@@ -130,15 +168,19 @@ export default function Edit() {
   async function handleEditBook(e) {
     e.preventDefault();
     try {
-      await updateBook(
-        user.token,
-        theme.Book[0].id,
-        bookForm.title,
-        bookForm.author
-      );
+      if (theme.Book.length === 0) {
+        await postBook(user.token, bookForm.title, bookForm.author, theme.id);
+      } else {
+        await updateBook(
+          user.token,
+          theme.Book[0].id,
+          bookForm.title,
+          bookForm.author
+        );
+      }
       alert("Livro atualizado com sucesso");
       setBookForm({ title: "", author: "" });
-      setEditBook(false)
+      setEditBook(false);
     } catch (error) {
       console.log(error);
     }

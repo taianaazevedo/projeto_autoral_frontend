@@ -24,11 +24,12 @@ export default function Post() {
       setSend("✓");
       setIsDisable(true);
     } catch (error) {
-      if(error.response.status === 409){
-        alert("Esse tema já existe. Busque por ele na barra de pesquisa! =)")
-      } else {
-        alert(error.response.data.message);
-      }      
+      if (error.response.status === 409) {
+        alert("Esse tema já existe. Busque por ele na barra de pesquisa! =)");
+      }
+      if (error.response.status === 400) {
+        alert("O título precisa ter mais de 5 caracteres");
+      }
       setSend("Criar");
       setIsDisable(false);
     }
