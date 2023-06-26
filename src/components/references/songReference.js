@@ -20,7 +20,7 @@ export default function SongReference({ id }) {
       setSend("✓");
       setIsDisable(true);
     } catch (error) {
-      console.log(error);
+      alert("Erro ao salvar a referência. Tente novamente.");
       setSend("Criar");
       setIsDisable(false);
     }

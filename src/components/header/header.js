@@ -33,7 +33,7 @@ export default function Header() {
       const result = await getThemeBySearch(user.token, search);
       setResultSearch(result)
     } catch (error) {
-      console.log(error.result.data.message);
+      alert(error.result.data.message);
       setIsSearching(false);
     }
   }

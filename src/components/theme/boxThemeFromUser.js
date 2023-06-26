@@ -11,7 +11,7 @@ export default function BoxTheme({ themes, setThemes, user }) {
       alert("Tema excluído com sucesso!");
       setThemes((prevThemes) => prevThemes.filter((theme) => theme.id !== id));
     } catch (error) {
-      alert(error.response.data.message);
+      alert("Houve um erro inesperado. Tente novamente");
     }
   }
 

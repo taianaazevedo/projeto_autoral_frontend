@@ -27,9 +27,11 @@ export default function FormSignUp() {
       );
       navigate("/sign-in");
     } catch (error) {
-      if (error.response.status === 409) return alert("O e-mail já está em uso.");
-      if(error.response.status === 400) {
-        alert("Dados inválidos.")
+      if (error.response.status === 409) {
+        alert("O e-mail já está em uso.");
+      }
+      if (error.response.status === 400) {
+        alert("Dados inválidos. Confira a url e verifique se a senha tem pelo menos 6 dígitos");
       }
     }
   }

@@ -15,7 +15,7 @@ export default function FavoritePage() {
       const favorites = await getFavorites(user.token);
       setFavorites(favorites);
     } catch (error) {
-      console.log(error.message);
+      alert("Houve um erro ao carregar a página. Tente novamente.");
     }
   }
 

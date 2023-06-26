@@ -15,7 +15,7 @@ export default function HomePage() {
       const themesApi = await getThemes(user.token);
       setThemes(themesApi);
     } catch (error) {
-      console.log(error.message);
+      alert("Erro ao carregar os temas. Tente novamente.");
     }
   }
 

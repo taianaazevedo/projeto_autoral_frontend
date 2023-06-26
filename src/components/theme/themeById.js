@@ -24,7 +24,7 @@ export default function ThemeById({ id }) {
       setThemeById(themeData);
       setIsMyFavorite(isFavorite);
     } catch (error) {
-      console.log(error.message);
+      alert("Houve um erro inesperado. Tente novamente");
     }
   }
 
@@ -33,7 +33,7 @@ export default function ThemeById({ id }) {
       await postFavorite(user.token, themeById.id);
       setIsMyFavorite(true);
     } catch (error) {
-      console.log(error.message);
+      alert("Houve um erro inesperado. Tente novamente");
     }
   }
 

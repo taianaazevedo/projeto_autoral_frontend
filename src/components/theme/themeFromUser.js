@@ -14,7 +14,7 @@ export default function ThemesFromUser() {
       const themesApi = await getThemesFromUser(user.token);
       setThemes(themesApi);
     } catch (error) {
-      console.log(error.message);
+      alert("Houve um erro ao carregar seus temas. Tente novamente");;
     }
   }
 

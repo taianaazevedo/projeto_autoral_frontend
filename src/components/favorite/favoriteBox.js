@@ -12,7 +12,7 @@ export default function FavoriteBox({ favorites, setFavorites, user }) {
         prevFavorites.filter((fav) => fav.id !== id)
       );
     } catch (error) {
-      console.log(error);
+      alert("Houve um erro. Tente novamente");
     }
   }
 
